@@ -23,7 +23,9 @@ def second_supply_for_fourth_of_july(holiday_hash)
     if season == :summer 
       holidays.each do |holiday, activity|
         if holiday == :fourth_of_july
-          print activity[1]
+          activity do |event|
+            event[1]
+          end 
         end 
       end
     end 
